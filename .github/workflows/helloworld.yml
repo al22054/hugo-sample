@@ -8,3 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
+  ls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+      - run: ls -la
